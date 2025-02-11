@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/style/style.css" />
-  </head>
-  <body>
-    <header-custom></header-custom>
-    <!-- <form-input></form-input> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      padding: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="./src/style/style.css">
+</head>
+<body>
 
-    <form class="note-form">
-      <div class="form-group">
-        <label for="note-title">Judul</label>
-        <input
-          type="text"
-          id="note-title"
-          placeholder="Masukkan judul note"
-          required
-        />
-      </div>
+  <main>
+    <header-custom aktif="home" ></header-custom>
+  
+    <home-section></home-section>
+  
+    <button-custom borderRadius="10">Get Started</button-custom>
+  </main>
 
-      <div class="form-group">
-        <label for="note-content">Isi Note</label>
-        <textarea
-          id="note-content"
-          placeholder="Tuliskan isi note anda di sini..."
-          required
-        ></textarea>
-      </div>
-
-      <div class="form-buttons">
-        <button type="submit" id="submit" class="save-btn">Simpan</button>
-      </div>
-    </form>
-
-    <script type="module" src="./src/script/main.js"></script>
-  </body>
+  <script type="module" src="./src/script/main.js"></script>
+</body>
 </html>

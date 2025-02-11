@@ -1,46 +1,91 @@
 class Header extends HTMLElement {
-    constructor() {
-        super()
 
-        this._shadowRoot = this.attachShadow({mode: 'open'})
-        this._style = document.createElement('style')
-    }
+  static observedAttributes = ['aktif']
+  constructor() {
+    super();
 
-    connectedCallback(){
-        this.render()
-    }
+    this._aktif = this.getAttribute('aktif') || 'notes';
+    
+    this._shadowRoot = this.attachShadow({ mode: "open" });
+    this._style = document.createElement("style");
+  }
 
-    updateStyle(){
-        this._style.innerHTML = `
-            @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&display=swap');
+  connectedCallback() {
+    this.render();
+  }
+
+  updateStyle() {
+    this._style.innerHTML = `
+           @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
            
-            div {
-                text-align: left;
-                padding: 10px 20px;
-                font-size: 20px;
-                font-weight: 700;
-                font-family: poppins, sans-serif;
+           :host {
+                color: white;
+                font-family: roboto, sans-serif;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: rgb(70, 66, 60, 0.2);
+                backdrop-filter: blur(5px);
+           }
+
+           .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            padding: 5px 20px;
             }
-        `
+
+    .container ul {
+      display: flex;
+      gap: 1rem;
+      padding: 0px;
+      list-style: none;
     }
 
-    emptyElement(){
-        this._shadowRoot.innerHTML = ''
+    .container ul li a {
+      text-decoration: none;
+      color: rgb(108, 105, 105);
+      font-weight: 700;
+      transition: all .5s;
     }
 
-    render(){
-        this.emptyElement()
-        this.updateStyle()
+    .${this._aktif} a {
+      color: rgb(54, 51, 51) !important;
+    }
+    .container ul li a:hover {
+        color:  rgb(54, 51, 51);
+    }
+        `;
+  }
 
-        this._shadowRoot.appendChild(this._style)
+  emptyElement() {
+    this._shadowRoot.innerHTML = "";
+  }
 
-        this._shadowRoot.innerHTML += `
-        ${this._style.outerHTML}
-        <div>
-            <h1>Rafi Notes</h1>
+  render() {
+    this.emptyElement();
+    this.updateStyle();
+
+    this._shadowRoot.appendChild(this._style);
+
+    this._shadowRoot.innerHTML += `
+        <div class="container">
+        <h1>MyNotes</h1>
+            <ul>
+              <li class="home"><a href="index.html">Home</a></li>
+              <li class="notes"><a href="notes.html">Notes</a></li>
+            </ul>
         </div>
-        `
-    }
+        `;
+  }
+
+  attributeChangedCallback(name, old, newValue){
+      this[`._${name}`] = newValue;
+
+      this.render()
+  }
 }
 
-customElements.define('header-custom', Header)
+customElements.define("header-custom", Header);

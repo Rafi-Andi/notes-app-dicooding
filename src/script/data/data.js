@@ -105,5 +105,7 @@ const notesData = [
       archived: false,
     },
   ];
-  
-export default notesData;
+
+const noteListElement = document.querySelector('note-list')
+noteListElement.setNotesData(notesData)
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="src/style/style.css">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            background-color: #545252;
+            padding: 10px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .container-isi {
+            background-color: #373737;
+            padding: 10px;
+            border-radius: 10px;
+            
+        }
+
+        h2 {
+            transform: translateY(-10px);
+            color: #d3d3d3;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #373737;
+        }
+        
+        p {
+            margin-top: 10px;
+            color: #adabab;
+        }
+
+        .keterangan {
+            display: flex;
+            gap: 1rem;
+            color: #d3d3d3;
+        }
+        .container-img {
+            border-radius: 50px;
+            background-color: black;
+            width: fit-content;
+            padding: 8px;
+        }
+
+        main {
+            /* padding: 20px; */
+            padding: 100px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header-custom></header-custom>
+
+    <main>
+        <note-list>
+        </note-list>
+
+        <div style="margin-top: 10px; position: fixed; bottom: 10px; right: 10px;">
+            <button-custom borderRadius="50"><i data-feather="plus"></i></button-custom>
+        </div>
+    </main>
+
+    <script>
+        feather.replace();
+      </script>
+    <script type="module" src="./src/script/main.js"></script>
+</body>
+</html>
