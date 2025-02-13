@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            background-color: #1d1d1d;
+            padding: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            margin: auto;
+            margin-top: 50px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+
+        form input, textarea {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            width: 100%;
+            color: white;
+        }
+
+        form input {
+            font-size: 25px;
+            font-weight: 700;
+            margin-left: 15px;
+            height: 100px;
+        }
+
+        form textarea {
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 15px;
+            resize: vertical;
+            font-family: poppins, sans-serif;
+        }
+        .container-isi {
+            background-color: #373737;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+          margin-left: 10px;
+        }
+        .keterangan {
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            width: fit-content;
+            text-align: center;
+            margin: auto;
+            padding: 5px 20px;
+            border-radius: 20px;
+            border: none;
+        }
+    </style>
+  </head>
+  <body>
+
+    <form action="notes.html">
+      <input 
+      type="title" 
+      name="title" 
+      id="title"
+      placeholder="input title"
+      required
+      >
+      <div class="container-isi">
+        <textarea
+        name="isi" 
+        id="isi" 
+        placeholder="Input Notes"
+        ></textarea>
+      </div>
+      <button type="submit">Add</button>
+    </form>
+
+    <script type="module" src="./src/script/main.js"></script>
+  </body>
+</html>

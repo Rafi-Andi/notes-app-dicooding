@@ -1,5 +1,5 @@
 class Button extends HTMLElement {
-    static observedAttributes = ['color', 'hover', 'borderRadius']
+    static observedAttributes = ['color', 'hover', 'borderRadius', 'href']
 
     constructor(){
         super()
@@ -7,6 +7,7 @@ class Button extends HTMLElement {
         this._shadowRoot = this.attachShadow({mode: 'open'})
         this._color = this.getAttribute('color')
         this._borderRadius = this.getAttribute('borderRadius')
+        this._href = this.getAttribute('href')
         this._style = document.createElement('style')
     }
 
@@ -51,7 +52,7 @@ class Button extends HTMLElement {
         this._shadowRoot.innerHTML = `
          ${this._style.outerHTML}
         <div class="container"> 
-            <a href=""><slot>Button</slot></a>
+            <a href="${this._href}"><slot>Button</slot></a>
         </div>
         `
     }

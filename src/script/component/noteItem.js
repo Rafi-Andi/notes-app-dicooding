@@ -38,6 +38,8 @@ class NoteItem extends HTMLElement {
             padding: 10px;
             border-radius: 10px;
             padding: 10px;
+            color: white;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
         }
 
         .container-isi {
@@ -56,15 +58,17 @@ class NoteItem extends HTMLElement {
         }
         
         p {
+          margin-left: 10px;
+        }
+        .container-isi p {
             margin-top: 10px;
-            color: #adabab;
+            color: white;
             min-height: 100px;
         }
 
         .keterangan {
             display: flex;
             gap: 1rem;
-            color: #d3d3d3;
         }
         `;
   }
@@ -84,6 +88,7 @@ class NoteItem extends HTMLElement {
     this._shadowRoot.innerHTML = `
     ${this._style.outerHTML}
                 <h2>${this._note.title}</h2>
+                <p>${this._note.createdAt} | ${this._note.body.length} Character</p> 
                 <div class="container-isi">
                     <p>${this._note.body}</p>
                 </div>
