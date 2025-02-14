@@ -73,7 +73,7 @@ class Header extends HTMLElement {
 
     this._shadowRoot.innerHTML += `
         <div class="container">
-        <h1>MyNotes</h1>
+        <h1>RafiNotes</h1>
             <ul>
               <li class="home"><a href="index.html">Home</a></li>
               <li class="notes"><a href="notes.html">Notes</a></li>

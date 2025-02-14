@@ -1,5 +1,3 @@
-// import '../component/noteItem.js'
-// import '../component/noteList.js'
 import { notesData } from "./data.js";
 import { customValidationUsernameHandler } from '../validasiForm.js';
 
@@ -72,8 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function generateId() {
     const prefix = "notes";
-    const randomStr = Math.random().toString(36).substring(2, 8); // 6 karakter acak
-    const randomNum = Math.floor(100000 + Math.random() * 900000); // 6 digit angka
+    const randomStr = Math.random().toString(36).substring(2, 8); 
+    const randomNum = Math.floor(100000 + Math.random() * 900000);
 
     return `${prefix}-${randomStr}-${randomNum}`;
   }

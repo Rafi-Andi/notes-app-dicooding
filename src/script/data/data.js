@@ -1,6 +1,5 @@
 console.log('sudah berjalan data.js')
 
-// import {noteObjek} from './noteInput.js'
 export const notesData = [
     {
       id: 'notes-jT-jjsyz61J8XKiI',
