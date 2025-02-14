@@ -27,6 +27,7 @@ class Header extends HTMLElement {
                 right: 0;
                 background-color: rgb(70, 66, 60, 0.2);
                 backdrop-filter: blur(5px);
+                z-index: 999px;
            }
 
            .container {
@@ -46,16 +47,16 @@ class Header extends HTMLElement {
 
     .container ul li a {
       text-decoration: none;
-      color: rgb(108, 105, 105);
+      color: white;
       font-weight: 700;
       transition: all .5s;
     }
 
     .${this._aktif} a {
-      color: rgb(54, 51, 51) !important;
+      color: rgb(108, 105, 105) !important;
     }
     .container ul li a:hover {
-        color:  rgb(54, 51, 51);
+        color:  rgb(108, 105, 105);
     }
         `;
   }

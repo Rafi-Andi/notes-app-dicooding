@@ -63,12 +63,33 @@
 
     <header-custom></header-custom>
 
+    <form action="form.html" class="form">
+        <input 
+        type="title" 
+        name="title" 
+        id="title"
+        placeholder="input title"
+        required
+        maxlength="20"
+        >
+        <div class="container-isi">
+          <textarea
+          name="isi" 
+          id="isi" 
+          placeholder="Input Notes"
+          required
+          minlength="6"
+          ></textarea>
+        </div>
+        <button type="submit">Add</button>
+      </form>
+
     <main>
         <note-list>
         </note-list>
 
-        <div style="margin-top: 10px; position: fixed; bottom: 10px; right: 10px;">
-            <button-custom borderRadius="50" href="form.html"><i data-feather="plus"></i></button-custom>
+        <div id="toggleForm" style="margin-top: 10px; position: fixed; bottom: 10px; right: 10px;">
+            <button-custom borderRadius="50"><i data-feather="plus"></i></button-custom>
         </div>
     </main>
 

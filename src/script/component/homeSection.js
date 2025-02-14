@@ -47,8 +47,8 @@ class HomeSection extends HTMLElement {
         this._shadowRoot.innerHTML += `
     <div class="container">
       <img src="./src/img/NotesIcon.png" alt="" width="300px">
-      <h1>My Notes</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, non maiores. Quas officiis dicta voluptatum?</p>
+      <h1>Rafi Notes</h1>
+      <p>Tugas dicooding submission membuat website notes APP menggunakan web component javascript dan juga mengambil data dari data yang sudah di sediakan</p>
     </div>
         `
     }

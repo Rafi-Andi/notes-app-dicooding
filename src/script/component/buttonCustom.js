@@ -7,7 +7,7 @@ class Button extends HTMLElement {
         this._shadowRoot = this.attachShadow({mode: 'open'})
         this._color = this.getAttribute('color')
         this._borderRadius = this.getAttribute('borderRadius')
-        this._href = this.getAttribute('href')
+        this._href = this.getAttribute('href') || '#'
         this._style = document.createElement('style')
     }
 

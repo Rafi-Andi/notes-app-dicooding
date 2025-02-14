@@ -1,4 +1,7 @@
-const notesData = [
+console.log('sudah berjalan data.js')
+
+// import {noteObjek} from './noteInput.js'
+export const notesData = [
     {
       id: 'notes-jT-jjsyz61J8XKiI',
       title: 'Welcome to Notes, Dimas!',
@@ -106,6 +109,7 @@ const notesData = [
     },
   ];
 
-const noteListElement = document.querySelector('note-list')
-noteListElement.setNotesData(notesData)
+  
+  const noteListElement = document.querySelector('note-list')
+  noteListElement.setNotesData(notesData)
 
